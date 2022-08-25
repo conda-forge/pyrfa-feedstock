@@ -23,13 +23,13 @@ source:
   sha256: f148c1cbc2e0b47ca66b731a4154af8c901ed3209732c8704797348b70c80b88  # [py==37 and win64]
   
 build:
-  number: 0
+  number: 1
   skip: True  # [not win64 and not linux64]
   script: pip install --no-deps {{ fn_win }}  # [win64]
   script: pip install --no-deps {{ fn_linux }}  # [linux64]
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
